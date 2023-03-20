@@ -8,4 +8,6 @@ public interface BlogLoginService extends IService<User> {
 
     ResponseResult login(User user);
 
+    ResponseResult logout();
+
 }

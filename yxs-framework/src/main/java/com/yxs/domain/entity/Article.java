@@ -12,8 +12,8 @@ import lombok.experimental.Accessors;
 
 @SuppressWarnings("yxs")
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Accessors(chain = true)
 @TableName("sg_article")
 public class Article {

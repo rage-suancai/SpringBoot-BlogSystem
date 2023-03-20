@@ -11,23 +11,29 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@TableName("sg_link")
-public class Link {
+@TableName("sg_comment")
+public class Comment {
 
     @TableId
     private Long id;
-    
-    private String name;
-    
-    private String logo;
-    
-    private String description;
 
-    // 网站地址
-    private String address;
+    // 评论类型(0代表文章评论 1代表友链评论)
+    private String type;
 
-    // 审核状态(0代表审核通过 1代表审核未通过 2代表未审核)
-    private String status;
+    // 文章id
+    private Long articleId;
+
+    // 根评论id
+    private Long rootId;
+
+    // 评论内容
+    private String content;
+
+    // 所回复的目标评论的userid
+    private Long toCommentUserId;
+
+    // 回复目标评论id
+    private Long toCommentId;
     
     private Long createBy;
     
