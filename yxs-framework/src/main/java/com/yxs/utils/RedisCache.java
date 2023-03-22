@@ -224,4 +224,14 @@ public class RedisCache {
         return redisTemplate.keys(pattern);
     }
 
+    /**
+     * 在应用启动时把博客的浏览量存储到redis中
+     * @param key
+     * @param hkey
+     * @param v
+     */
+    public void incrementCacheMapValue(String key, String hkey, long v) {
+        redisTemplate.boundHashOps(key).increment(hkey, v);
+    }
+
 }

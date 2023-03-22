@@ -1,4 +1,4 @@
-package com.yxs.exception;
+package com.yxs.handler.exception;
 
 import com.yxs.enums.AppHttpCodeEnum;
 

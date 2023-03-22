@@ -1,9 +1,10 @@
 package com.yxs.controller;
 
+import com.yxs.constants.SystemConstants;
 import com.yxs.domain.ResponseResult;
+import com.yxs.domain.entity.Comment;
 import com.yxs.service.CommentService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 
@@ -14,7 +15,8 @@ import javax.annotation.Resource;
  * @Desription:
  * @date 2023/3/20 14:59
  */
-@RestController("/comment")
+@RestController
+@RequestMapping("/comment")
 public class CommentController {
 
     @Resource
@@ -23,7 +25,20 @@ public class CommentController {
     @GetMapping("/commentList")
     public ResponseResult commentList(Long articleId, Integer pageNum, Integer pageSize) {
 
-        return commentService.commentList(articleId, pageNum, pageSize);
+        return commentService.commentList(SystemConstants.ARTICLE_COMMENT, articleId, pageNum, pageSize);
+
+    }
+    @GetMapping("/linkCommentList")
+    public ResponseResult linkCommentList(Integer pageNum, Integer pageSize) {
+
+        return commentService.commentList(SystemConstants.LINK_COMMENT, null, pageNum, pageSize);
+
+    }
+
+    @PostMapping
+    public ResponseResult comment(@RequestBody Comment comment) {
+
+        return commentService.addComment(comment);
 
     }
 

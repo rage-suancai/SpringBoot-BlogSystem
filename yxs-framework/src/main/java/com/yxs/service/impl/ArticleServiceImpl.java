@@ -11,6 +11,7 @@ import com.yxs.mapper.ArticleMapper;
 import com.yxs.service.ArticleService;
 import com.yxs.service.CategoryService;
 import com.yxs.utils.BeanCopyUtils;
+import com.yxs.utils.RedisCache;
 import com.yxs.vo.ArticleDetailVo;
 import com.yxs.vo.ArticleListVo;
 import com.yxs.vo.HotArticleVo;
@@ -34,6 +35,8 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
 
     @Resource
     private CategoryService categoryService;
+    @Resource
+    private RedisCache redisCache;
 
     @Override
     public ResponseResult hotArticleList() {
@@ -42,7 +45,7 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
 
         queryWrapper.eq(Article::getStatus, SystemConstants.ARTICLE_STATUS_NORMAL); // 不能是草稿
         queryWrapper.orderByDesc(Article::getViewCount); // 排序
-        Page<Article> page = new Page(1, 10); // 最多10条
+        Page<Article> page = new Page<>(1, 10); // 最多10条
         page(page, queryWrapper);
         List<Article> articles = page.getRecords();
 
@@ -85,6 +88,14 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
 
         if (category != null) articleDetailVo.setCategoryName(category.getName());
         return ResponseResult.okResult(articleDetailVo); // 封装响应返回
+
+    }
+
+    @Override
+    public ResponseResult updateViewCount(Long id) {
+
+        redisCache.incrementCacheMapValue(SystemConstants.VIEW_COUNT, id.toString(), 1);
+        return ResponseResult.okResult();
 
     }
 

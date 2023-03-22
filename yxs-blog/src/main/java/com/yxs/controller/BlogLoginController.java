@@ -3,7 +3,7 @@ package com.yxs.controller;
 import com.yxs.domain.ResponseResult;
 import com.yxs.domain.entity.User;
 import com.yxs.enums.AppHttpCodeEnum;
-import com.yxs.exception.SystemException;
+import com.yxs.handler.exception.SystemException;
 import com.yxs.service.BlogLoginService;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.PostMapping;
