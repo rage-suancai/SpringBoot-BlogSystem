@@ -2,8 +2,8 @@ package com.yxs.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.yxs.domain.entity.LoginUser;
-import com.yxs.mapper.UserMapper;
 import com.yxs.domain.entity.User;
+import com.yxs.mapper.UserMapper;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

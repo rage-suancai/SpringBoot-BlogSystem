@@ -23,4 +23,7 @@ public class SystemConstants {
 
     public static final String VIEW_COUNT = "article:viewCount"; // redis的key
 
+    public static final String MENU = "C";
+    public static final String BUTTON = "F";
+
 }

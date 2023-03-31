@@ -13,12 +13,10 @@ import org.springframework.security.core.context.SecurityContextHolder;
  */
 public class SecurityUtils {
 
-
     // 获取用户
     public static LoginUser getLoginUser() {
         return (LoginUser) getAuthentication().getPrincipal();
     }
-
 
     // 获取Authentication
     public static Authentication getAuthentication() {
@@ -28,7 +26,7 @@ public class SecurityUtils {
     public static Boolean isAdmin() {
 
         Long id = getLoginUser().getUser().getId();
-        return id != null && 1L == id;
+        return id != null && id.equals(1L);
 
     }
 

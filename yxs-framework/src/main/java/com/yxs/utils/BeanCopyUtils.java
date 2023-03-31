@@ -1,7 +1,5 @@
 package com.yxs.utils;
 
-import com.yxs.domain.entity.Article;
-import com.yxs.vo.HotArticleVo;
 import org.springframework.beans.BeanUtils;
 
 import java.util.List;

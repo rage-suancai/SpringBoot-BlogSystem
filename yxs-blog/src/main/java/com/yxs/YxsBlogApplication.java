@@ -15,7 +15,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  */
 @EnableSwagger2
 @EnableScheduling
-@MapperScan("com.yxs.mapper")
+// @MapperScan("com.yxs.mapper")
 @SpringBootApplication
 public class YxsBlogApplication {
 
