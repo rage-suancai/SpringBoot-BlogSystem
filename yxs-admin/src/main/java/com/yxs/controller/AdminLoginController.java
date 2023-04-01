@@ -1,13 +1,12 @@
 package com.yxs.controller;
 
 import com.yxs.domain.ResponseResult;
-import com.yxs.domain.entity.Menu;
 import com.yxs.domain.entity.User;
 import com.yxs.enums.AppHttpCodeEnum;
 import com.yxs.handler.exception.SystemException;
 import com.yxs.service.AdminService;
-import com.yxs.vo.AdminUserInfoVo;
-import com.yxs.vo.RoutersVo;
+import com.yxs.domain.vo.AdminUserInfoVo;
+import com.yxs.domain.vo.RoutersVo;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
@@ -27,7 +26,7 @@ public class AdminLoginController {
     private AdminService adminService;
 
     @PostMapping("/user/login")
-    public ResponseResult login(@RequestBody User user) {
+    public ResponseResult<RoutersVo> login(@RequestBody User user) {
 
         if (!StringUtils.hasText(user.getUserName())) throw new SystemException(AppHttpCodeEnum.REQUIRE_USERNAME);
         return adminService.login(user);
@@ -44,6 +43,13 @@ public class AdminLoginController {
     public ResponseResult<RoutersVo> getRouters() {
 
         return adminService.getRouters();
+
+    }
+
+    @PostMapping("/user/logout")
+    public ResponseResult logout() {
+
+        return adminService.logout();
 
     }
 

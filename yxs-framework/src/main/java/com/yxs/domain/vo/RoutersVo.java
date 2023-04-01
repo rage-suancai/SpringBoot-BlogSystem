@@ -1,4 +1,4 @@
-package com.yxs.vo;
+package com.yxs.domain.vo;
 
 import com.yxs.domain.entity.Menu;
 import lombok.AllArgsConstructor;

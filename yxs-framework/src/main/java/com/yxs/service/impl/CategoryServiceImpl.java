@@ -10,7 +10,7 @@ import com.yxs.mapper.CategoryMapper;
 import com.yxs.service.ArticleService;
 import com.yxs.service.CategoryService;
 import com.yxs.utils.BeanCopyUtils;
-import com.yxs.vo.CategoryVo;
+import com.yxs.domain.vo.CategoryVo;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

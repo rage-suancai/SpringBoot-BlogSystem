@@ -5,6 +5,9 @@ import com.yxs.domain.ResponseResult;
 import com.yxs.domain.entity.LoginUser;
 import com.yxs.domain.entity.Menu;
 import com.yxs.domain.entity.User;
+import com.yxs.domain.vo.AdminUserInfoVo;
+import com.yxs.domain.vo.RoutersVo;
+import com.yxs.domain.vo.UserInfoVo;
 import com.yxs.mapper.AdminMapper;
 import com.yxs.service.AdminService;
 import com.yxs.service.MenuService;
@@ -13,12 +16,10 @@ import com.yxs.utils.BeanCopyUtils;
 import com.yxs.utils.JwtUtil;
 import com.yxs.utils.RedisCache;
 import com.yxs.utils.SecurityUtils;
-import com.yxs.vo.AdminUserInfoVo;
-import com.yxs.vo.RoutersVo;
-import com.yxs.vo.UserInfoVo;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -47,7 +48,7 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, User> implements 
     private RedisCache redisCache;
 
     @Override
-    public ResponseResult login(User user) {
+    public ResponseResult<RoutersVo> login(User user) {
 
         UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(user.getUserName(), user.getPassword());
         Authentication authenticate = authenticationManager.authenticate(authenticationToken);
@@ -83,7 +84,16 @@ public class AdminServiceImpl extends ServiceImpl<AdminMapper, User> implements 
 
         Long userId = SecurityUtils.getUserId();
         List<Menu> menus = menuService.selectRouterMenuTreeByUserId(userId);// 查询menuVo 结果是tree的形式
-        return ResponseResult.okResult(menus); // 封装数据返回
+        return ResponseResult.okResult(new RoutersVo(menus)); // 封装数据返回
+
+    }
+
+    @Override
+    public ResponseResult logout() {
+
+        Long userId = SecurityUtils.getUserId(); // 获取当前登录的用户id
+        redisCache.deleteObject("login:" + userId); // 删除redis中对应的值
+        return ResponseResult.okResult();
 
     }
 

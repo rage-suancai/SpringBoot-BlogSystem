@@ -1,4 +1,4 @@
-package com.yxs.vo;
+package com.yxs.domain.vo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,23 +7,16 @@ import lombok.NoArgsConstructor;
 /**
  * @author YXS
  * @PackageName: com.yxs.vo
- * @ClassName: LinkVo
+ * @ClassName: TagVo
  * @Desription:
- * @date 2023/3/19 0:56
+ * @date 2023/4/1 9:58
  */
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
-public class LinkVo {
-
-    private String address; // 网站地址
-
-    private String description;
+@AllArgsConstructor
+public class TagVo {
 
     private Long id;
-
-    private String logo;
-
     private String name;
 
 }

@@ -1,22 +1,24 @@
-package com.yxs.vo;
+package com.yxs.domain.vo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 /**
  * @author YXS
  * @PackageName: com.yxs.vo
- * @ClassName: BlogUserLoginVo
+ * @ClassName: PageVo
  * @Desription:
- * @date 2023/3/19 3:29
+ * @date 2023/3/18 21:48
  */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class BlogUserLoginVo {
+public class PageVo {
 
-    private String token;
-    private UserInfoVo userInfo;
+    private List rows;
+    private Long total;
 
 }

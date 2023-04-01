@@ -6,14 +6,14 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.yxs.constants.SystemConstants;
 import com.yxs.domain.ResponseResult;
 import com.yxs.domain.entity.Comment;
+import com.yxs.domain.vo.CommentVo;
+import com.yxs.domain.vo.PageVo;
 import com.yxs.enums.AppHttpCodeEnum;
 import com.yxs.handler.exception.SystemException;
 import com.yxs.mapper.CommentMapper;
 import com.yxs.service.CommentService;
 import com.yxs.service.UserService;
 import com.yxs.utils.BeanCopyUtils;
-import com.yxs.vo.CommentVo;
-import com.yxs.vo.PageVo;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 

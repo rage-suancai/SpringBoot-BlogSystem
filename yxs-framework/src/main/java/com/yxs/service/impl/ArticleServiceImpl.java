@@ -5,18 +5,21 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.yxs.constants.SystemConstants;
 import com.yxs.domain.ResponseResult;
+import com.yxs.domain.dto.AddArticleDto;
+import com.yxs.domain.dto.ArticleDto;
 import com.yxs.domain.entity.Article;
+import com.yxs.domain.entity.ArticleTag;
 import com.yxs.domain.entity.Category;
+import com.yxs.domain.vo.*;
 import com.yxs.mapper.ArticleMapper;
 import com.yxs.service.ArticleService;
+import com.yxs.service.ArticleTagService;
 import com.yxs.service.CategoryService;
 import com.yxs.utils.BeanCopyUtils;
 import com.yxs.utils.RedisCache;
-import com.yxs.vo.ArticleDetailVo;
-import com.yxs.vo.ArticleListVo;
-import com.yxs.vo.HotArticleVo;
-import com.yxs.vo.PageVo;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.StringUtils;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -35,6 +38,8 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
 
     @Resource
     private CategoryService categoryService;
+    @Resource
+    private ArticleTagService articleTagService;
     @Resource
     private RedisCache redisCache;
 
@@ -96,6 +101,67 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
 
         redisCache.incrementCacheMapValue(SystemConstants.VIEW_COUNT, id.toString(), 1);
         return ResponseResult.okResult();
+
+    }
+
+    @Override
+    @Transactional
+    public ResponseResult addArticle(AddArticleDto articleDto) {
+
+        Article article = BeanCopyUtils.copyBean(articleDto, Article.class); // 添加博客
+        save(article);
+
+        List<ArticleTag> articleTags = articleDto.getTags().stream()
+                .map(tagId -> new ArticleTag(article.getId(), tagId))
+                .collect(Collectors.toList());
+
+        articleTagService.saveBatch(articleTags); // 添加博客和标签的关联
+        return ResponseResult.okResult();
+
+    }
+
+    @Override
+    public PageVo selectArticlePage(Article article, Integer pageNum, Integer pageSize) {
+
+        LambdaQueryWrapper<Article> queryWrapper = new LambdaQueryWrapper<>();
+
+        queryWrapper.like(StringUtils.hasText(article.getTitle()), Article::getTitle, article.getTitle());
+        queryWrapper.like(StringUtils.hasText(article.getSummary()), Article::getSummary, article.getSummary());
+        Page<Article> page = new Page<>();
+        page.setCurrent(pageNum); page.setSize(pageSize);
+        page(page, queryWrapper);
+
+        List<Article> articles = page.getRecords(); // 转换成VO
+        List<ArticleVo> articleVos = BeanCopyUtils.copyBeanList(articles, ArticleVo.class);
+        PageVo pageVo = new PageVo();
+        pageVo.setTotal(page.getTotal());
+        pageVo.setRows(articleVos);
+        return pageVo;
+
+    }
+
+    @Override
+    public ArticleVo getArticleInfo(Long id) {
+
+        Article article = getById(id);
+        LambdaQueryWrapper<ArticleTag> queryWrapper = new LambdaQueryWrapper<>();// 获取关联标签
+
+        queryWrapper.eq(ArticleTag::getArticleId, article.getId());
+        List<ArticleTag> articleTags = articleTagService.list(queryWrapper);
+        List<Long> tags = articleTags.stream()
+                .map(articleTag -> articleTag.getTagId())
+                .collect(Collectors.toList());
+
+        ArticleVo articleVo = BeanCopyUtils.copyBean(article, ArticleVo.class);
+        articleVo.setTags(tags);
+        return articleVo;
+
+    }
+
+    @Override
+    public void editArticle(ArticleDto articleDto) {
+
+
 
     }
 

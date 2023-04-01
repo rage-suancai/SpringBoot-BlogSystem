@@ -5,10 +5,10 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.yxs.constants.SystemConstants;
 import com.yxs.domain.ResponseResult;
 import com.yxs.domain.entity.Link;
+import com.yxs.domain.vo.LinkVo;
 import com.yxs.mapper.LinkMapper;
 import com.yxs.service.LinkService;
 import com.yxs.utils.BeanCopyUtils;
-import com.yxs.vo.LinkVo;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

@@ -10,7 +10,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 
-@SuppressWarnings("yxs")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

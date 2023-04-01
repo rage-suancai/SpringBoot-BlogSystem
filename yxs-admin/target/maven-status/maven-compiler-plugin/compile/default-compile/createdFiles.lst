@@ -1,2 +1,6 @@
+com\yxs\config\SecurityConfig.class
 com\yxs\controller\TagController.class
+com\yxs\controller\AdminLoginController.class
+com\yxs\controller\ArticleController.class
+com\yxs\filter\JwtAuthenticationTokenFilter.class
 com\yxs\BlogAdminApplication.class

@@ -1,4 +1,4 @@
-package com.yxs.vo;
+package com.yxs.domain.vo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,16 +7,16 @@ import lombok.NoArgsConstructor;
 /**
  * @author YXS
  * @PackageName: com.yxs.vo
- * @ClassName: CategoryVO
+ * @ClassName: BlogUserLoginVo
  * @Desription:
- * @date 2023/3/18 15:35
+ * @date 2023/3/19 3:29
  */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class CategoryVo {
+public class BlogUserLoginVo {
 
-    private Long id; // 主键
-    private String name; // 分类名
+    private String token;
+    private UserInfoVo userInfo;
 
 }

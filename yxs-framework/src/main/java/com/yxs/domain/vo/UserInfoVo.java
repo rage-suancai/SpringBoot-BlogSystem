@@ -1,4 +1,4 @@
-package com.yxs.vo;
+package com.yxs.domain.vo;
 
 import lombok.Data;
 import lombok.experimental.Accessors;
