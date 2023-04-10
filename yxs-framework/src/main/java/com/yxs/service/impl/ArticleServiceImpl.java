@@ -71,8 +71,8 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
 
         Page<Article> page = new Page<>(pageNum, pageSize); // 分页查询
         page(page, queryWrapper);
-        List<Article> articles = page.getRecords();
 
+        List<Article> articles = page.getRecords();
         articles.stream() // 查询categoryName
                 .map(article -> article.setCategoryName(categoryService.getById(article.getCategoryId()).getName()))
                 .collect(Collectors.toList());
@@ -133,9 +133,9 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
 
         List<Article> articles = page.getRecords(); // 转换成VO
         List<ArticleVo> articleVos = BeanCopyUtils.copyBeanList(articles, ArticleVo.class);
+
         PageVo pageVo = new PageVo();
-        pageVo.setTotal(page.getTotal());
-        pageVo.setRows(articleVos);
+        pageVo.setTotal(page.getTotal()); pageVo.setRows(articleVos);
         return pageVo;
 
     }
@@ -144,9 +144,9 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
     public ArticleVo getArticleInfo(Long id) {
 
         Article article = getById(id);
-        LambdaQueryWrapper<ArticleTag> queryWrapper = new LambdaQueryWrapper<>();// 获取关联标签
+        LambdaQueryWrapper<ArticleTag> queryWrapper = new LambdaQueryWrapper<>();
 
-        queryWrapper.eq(ArticleTag::getArticleId, article.getId());
+        queryWrapper.eq(ArticleTag::getArticleId, article.getId()); // 获取关联标签
         List<ArticleTag> articleTags = articleTagService.list(queryWrapper);
         List<Long> tags = articleTags.stream()
                 .map(articleTag -> articleTag.getTagId())
@@ -161,7 +161,18 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article> impl
     @Override
     public void editArticle(ArticleDto articleDto) {
 
+        Article article = BeanCopyUtils.copyBean(articleDto, Article.class);
+        updateById(article); // 更新博客信息
 
+        LambdaQueryWrapper<ArticleTag> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.eq(ArticleTag::getArticleId, article.getId()); // 删除原有的标签和博客的关联
+        articleTagService.remove(queryWrapper);
+
+        List<ArticleTag> articleTags = articleDto.getTags().stream() // 添加新的博客和标签的关联信息
+                .map(tagId -> new ArticleTag(articleDto.getId(), tagId))
+                .collect(Collectors.toList());
+
+        articleTagService.saveBatch(articleTags);
 
     }
 

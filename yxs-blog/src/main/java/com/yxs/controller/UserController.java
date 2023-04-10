@@ -23,24 +23,18 @@ public class UserController {
     private UserService userService;
 
     @GetMapping("/userInfo")
-    public ResponseResult userInfo() {
-
+    public final ResponseResult userInfo() {
         return userService.userInfo();
-
     }
     @PutMapping("/userInfo")
     @SystemLog(businessName = "更新用户信息")
-    public ResponseResult updateUserInfo(@RequestBody User user) {
-
+    public final ResponseResult updateUserInfo(@RequestBody User user) {
         return userService.updateUserInfo(user);
-
     }
 
     @PutMapping
-    public ResponseResult register(@RequestBody User user) {
-
+    public final ResponseResult register(@RequestBody User user) {
         return userService.register(user);
-
     }
 
 }

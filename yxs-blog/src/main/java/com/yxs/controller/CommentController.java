@@ -24,22 +24,16 @@ public class CommentController {
 
     @GetMapping("/commentList")
     public ResponseResult commentList(Long articleId, Integer pageNum, Integer pageSize) {
-
         return commentService.commentList(SystemConstants.ARTICLE_COMMENT, articleId, pageNum, pageSize);
-
     }
     @GetMapping("/linkCommentList")
     public ResponseResult linkCommentList(Integer pageNum, Integer pageSize) {
-
         return commentService.commentList(SystemConstants.LINK_COMMENT, null, pageNum, pageSize);
-
     }
 
     @PostMapping
     public ResponseResult comment(@RequestBody Comment comment) {
-
         return commentService.addComment(comment);
-
     }
 
 }

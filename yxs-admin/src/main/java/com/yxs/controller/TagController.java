@@ -29,9 +29,7 @@ public class TagController {
 
     @GetMapping("/list")
     public ResponseResult listTag(Integer pageNum, Integer pageSize, TagListDto tagListDto) {
-
         return tagService.pageTagList(pageNum, pageSize, tagListDto);
-
     }
 
     @PostMapping
@@ -45,10 +43,7 @@ public class TagController {
 
     @GetMapping(value = "/{id}")
     public ResponseResult getTagInfo(@PathVariable(value = "id") Long id) {
-
-        Tag tag = tagService.getById(id);
-        return ResponseResult.okResult(tag);
-
+        return ResponseResult.okResult(tagService.getById(id));
     }
 
     @PutMapping
@@ -62,13 +57,10 @@ public class TagController {
 
     @GetMapping("/listAllTag")
     public ResponseResult listAllTag() {
-
-        List<TagVo> list = tagService.listAllTag();
-        return ResponseResult.okResult(list);
-
+        return ResponseResult.okResult(tagService.listAllTag());
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping(value = "/{id}")
     public ResponseResult deleteTag(@PathVariable Long id) {
 
         tagService.removeById(id);

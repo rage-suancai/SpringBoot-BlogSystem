@@ -27,25 +27,17 @@ public class ArticleController {
 
     @PostMapping
     public ResponseResult addArticle(@RequestBody AddArticleDto articleDto) {
-
         return articleService.addArticle(articleDto);
-
     }
 
     @GetMapping("/list")
     public ResponseResult listArticle(Article article, Integer pageNum, Integer pageSize) {
-
-        PageVo pageVo = articleService.selectArticlePage(article, pageNum, pageSize);
-        return ResponseResult.okResult(pageVo);
-
+        return ResponseResult.okResult(articleService.selectArticlePage(article, pageNum, pageSize));
     }
 
     @GetMapping(value = "/{id}")
     public ResponseResult getArticleInfo(@PathVariable(value = "id") Long id) {
-
-        ArticleVo articleVo = articleService.getArticleInfo(id);
-        return ResponseResult.okResult(articleVo);
-
+        return ResponseResult.okResult(articleService.getArticleInfo(id));
     }
 
     @PutMapping
@@ -56,7 +48,7 @@ public class ArticleController {
 
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping(value = "/{id}")
     public ResponseResult deleteArticle(@PathVariable Long id) {
 
         articleService.removeById(id);

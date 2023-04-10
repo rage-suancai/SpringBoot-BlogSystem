@@ -8,6 +8,7 @@ import com.yxs.mapper.MenuMapper;
 import com.yxs.service.MenuService;
 import com.yxs.utils.SecurityUtils;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -23,11 +24,11 @@ public class MenuServiceImpl extends ServiceImpl<MenuMapper, Menu> implements Me
 
             wrapper.in(Menu::getMenuType, SystemConstants.MENU,SystemConstants.BUTTON);
             wrapper.eq(Menu::getStatus, SystemConstants.STATUS_NORMAL);
-
             List<Menu> menus = list(wrapper);
             List<String> perms = menus.stream()
                     .map(Menu::getPerms)
                     .collect(Collectors.toList());
+
             return perms;
         }
         return getBaseMapper().selectPermsByUserId(id);
@@ -50,6 +51,36 @@ public class MenuServiceImpl extends ServiceImpl<MenuMapper, Menu> implements Me
         // 先找出第一层的菜单 然后去找他们的子菜单设置到children属性中
         List<Menu> menuTree = builderMenuTree(menus, 0L);
         return menuTree;
+
+    }
+
+    @Override
+    public List<Menu> selectMenuList(Menu menu) {
+
+        LambdaQueryWrapper<Menu> queryWrapper = new LambdaQueryWrapper<>();
+
+        // menuName模糊查询
+        queryWrapper.like(StringUtils.hasText(menu.getMenuName()), Menu::getMenuName, menu.getMenuName());
+        queryWrapper.eq(StringUtils.hasText(menu.getStatus()), Menu::getStatus, menu.getStatus());
+        queryWrapper.orderByAsc(Menu::getParentId, Menu::getOrderNum); // 排序parent_id和order_num
+
+        List<Menu> menus = list(queryWrapper);
+        return menus;
+
+    }
+
+    @Override
+    public List<Long> selectMenuListByRoleId(Long roleId) {
+        return getBaseMapper().selectMenuListByRoleId(roleId);
+    }
+
+    @Override
+    public boolean hashChild(Long menuId) {
+
+        LambdaQueryWrapper<Menu> queryWrapper = new LambdaQueryWrapper<>();
+
+        queryWrapper.eq(Menu::getParentId, menuId);
+        return count(queryWrapper) != 0;
 
     }
 

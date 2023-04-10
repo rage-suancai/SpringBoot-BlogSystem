@@ -2,6 +2,7 @@ package com.yxs.domain.entity;
 
 import java.util.Date;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.AllArgsConstructor;
@@ -14,50 +15,39 @@ import lombok.NoArgsConstructor;
 @TableName("sys_user")
 public class User {
 
-    // 主键
     @TableId
-    private Long id;
+    private Long id; // 主键
 
-    // 用户名
-    private String userName;
+    private String userName; // 用户名
 
-    // 昵称
-    private String nickName;
-    // 密码
-    private String password;
+    private String nickName; // 昵称
 
-    // 用户类型: 0代表普通用户 1代表管理员
-    private String type;
+    private String password; // 密码
 
-    // 账号状态(0正常 1停用)
-    private String status;
+    private String type; // 用户类型: 0代表普通用户 1代表管理员
 
-    // 邮箱
-    private String email;
+    private String status; // 账号状态(0正常 1停用)
 
-    // 手机号
-    private String phonenumber;
+    private String email; // 邮箱
 
-    // 用户性别(0男 1女 2未知)
-    private String sex;
+    private String phonenumber; // 手机号
 
-    // 头像
-    private String avatar;
+    private String sex; // 用户性别(0男 1女 2未知)
 
-    // 创建人的用户id
-    private Long createBy;
+    private String avatar; // 头像
 
-    // 创建时间
-    private Date createTime;
+    private Long createBy; // 创建人的用户id
 
-    // 更新人
-    private Long updateBy;
+    private Date createTime; // 创建时间
 
-    // 更新时间
-    private Date updateTime;
+    private Long updateBy; // 更新人
 
-    // 删除标志(0代表未删除 1代表已删除)
-    private Integer delFlag;
+    private Date updateTime; // 更新时间
+
+    private Integer delFlag; // 删除标志(0代表未删除 1代表已删除)
+
+    @TableField(exist = false)
+    private Long[] roleIds; // 关联角色id数组 非user表字段
 
 }
 

@@ -35,22 +35,16 @@ public class AdminLoginController {
 
     @GetMapping("getInfo")
     public ResponseResult<AdminUserInfoVo> getInfo() {
-
         return adminService.getInfo();
-
     }
     @GetMapping("getRouters")
     public ResponseResult<RoutersVo> getRouters() {
-
         return adminService.getRouters();
-
     }
 
     @PostMapping("/user/logout")
     public ResponseResult logout() {
-
         return adminService.logout();
-
     }
 
 }

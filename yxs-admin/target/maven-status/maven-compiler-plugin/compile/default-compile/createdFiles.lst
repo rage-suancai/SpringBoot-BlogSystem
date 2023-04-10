@@ -1,6 +1,11 @@
+com\yxs\controller\CategoryController.class
+com\yxs\controller\UserController.class
 com\yxs\config\SecurityConfig.class
 com\yxs\controller\TagController.class
 com\yxs\controller\AdminLoginController.class
+com\yxs\controller\RoleController.class
 com\yxs\controller\ArticleController.class
+com\yxs\controller\UploadController.class
 com\yxs\filter\JwtAuthenticationTokenFilter.class
+com\yxs\controller\MenuController.class
 com\yxs\BlogAdminApplication.class

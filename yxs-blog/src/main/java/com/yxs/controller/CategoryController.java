@@ -25,9 +25,7 @@ public class CategoryController {
 
     @GetMapping("/getCategoryList")
     public ResponseResult getCategoryList() {
-
         return categoryService.getCategoryList();
-
     }
 
 }

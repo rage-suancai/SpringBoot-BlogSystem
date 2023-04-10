@@ -11,5 +11,11 @@ public interface MenuService extends IService<Menu> {
 
     List<Menu> selectRouterMenuTreeByUserId(Long userId);
 
+    List<Menu> selectMenuList(Menu menu);
+
+    List<Long> selectMenuListByRoleId(Long roleId);
+
+    boolean hashChild(Long menuId);
+
 }
 

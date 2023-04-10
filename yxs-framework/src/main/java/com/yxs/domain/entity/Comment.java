@@ -19,23 +19,17 @@ public class Comment {
     @TableId
     private Long id;
 
-    // 评论类型(0代表文章评论 1代表友链评论)
-    private String type;
+    private String type; // 评论类型(0代表文章评论 1代表友链评论)
 
-    // 文章id
-    private Long articleId;
+    private Long articleId; // 文章id
 
-    // 根评论id
-    private Long rootId;
+    private Long rootId; // 根评论id
 
-    // 评论内容
-    private String content;
+    private String content; // 评论内容
 
-    // 所回复的目标评论的userid
-    private Long toCommentUserId;
+    private Long toCommentUserId; // 所回复的目标评论的userid
 
-    // 回复目标评论id
-    private Long toCommentId;
+    private Long toCommentId; // 回复目标评论id
 
     @TableField(fill = FieldFill.INSERT)
     private Long createBy;
@@ -49,8 +43,7 @@ public class Comment {
     @TableField(fill = FieldFill.INSERT_UPDATE)
     private Date updateTime;
 
-    // 删除标志(0代表未删除 1代表已删除)
-    private Integer delFlag;
+    private Integer delFlag; // 删除标志(0代表未删除 1代表已删除)
 
 }
 
