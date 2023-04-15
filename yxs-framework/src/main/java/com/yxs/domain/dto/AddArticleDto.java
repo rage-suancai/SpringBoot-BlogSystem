@@ -11,7 +11,6 @@ import java.util.List;
  * @PackageName: com.yxs.domain.dto
  * @ClassName: AddArticleDto
  * @Desription:
- * @date 2023/4/1 10:51
  */
 @Data
 @AllArgsConstructor

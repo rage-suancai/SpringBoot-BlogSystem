@@ -10,7 +10,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  * @PackageName: com.yxs
  * @ClassName: YxsBlogApplication
  * @Desription:
- * @date 2023/3/17 23:30
  */
 @EnableSwagger2
 @EnableScheduling

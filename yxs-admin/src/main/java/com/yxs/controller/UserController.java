@@ -22,7 +22,6 @@ import java.util.List;
  * @PackageName: com.yxs.controller
  * @ClassName: UserController
  * @Desription:
- * @date 2023/4/10 11:45
  */
 @RestController
 @RequestMapping("/system/user")

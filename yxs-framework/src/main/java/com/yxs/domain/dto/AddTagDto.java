@@ -9,7 +9,6 @@ import lombok.NoArgsConstructor;
  * @PackageName: com.yxs.domain.dto
  * @ClassName: AddListDto
  * @Desription:
- * @date 2023/3/31 17:28
  */
 @Data
 @NoArgsConstructor

@@ -9,7 +9,6 @@ import org.springframework.security.core.context.SecurityContextHolder;
  * @PackageName: com.yxs.utils
  * @ClassName: SecurityUtils
  * @Desription:
- * @date 2023/3/20 22:38
  */
 public class SecurityUtils {
 

@@ -25,7 +25,6 @@ import java.util.Objects;
  * @PackageName: com.yxs.service.impl
  * @ClassName: UserServiceImpl
  * @Desription:
- * @date 2023/3/19 2:15
  */
 @Service("blogLoginService")
 public class BlogLoginServiceImpl extends ServiceImpl<BlogLoginMapper, User> implements BlogLoginService {

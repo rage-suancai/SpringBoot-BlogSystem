@@ -8,7 +8,6 @@ import lombok.experimental.Accessors;
  * @PackageName: com.yxs.vo
  * @ClassName: UserInfoVo
  * @Desription:
- * @date 2023/3/19 3:28
  */
 @Data
 @Accessors(chain = true)

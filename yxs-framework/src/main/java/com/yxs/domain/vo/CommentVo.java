@@ -12,7 +12,6 @@ import java.util.List;
  * @PackageName: com.yxs.vo
  * @ClassName: CommentVo
  * @Desription:
- * @date 2023/3/20 15:57
  */
 @Data
 @NoArgsConstructor

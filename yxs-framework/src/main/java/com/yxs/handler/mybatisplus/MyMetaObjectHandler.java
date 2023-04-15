@@ -12,7 +12,6 @@ import java.util.Date;
  * @PackageName: com.yxs.handler.mybatisplus
  * @ClassName: MyMetaObjectHandler
  * @Desription:
- * @date 2023/3/21 1:25
  */
 @Component
 public class MyMetaObjectHandler implements MetaObjectHandler {

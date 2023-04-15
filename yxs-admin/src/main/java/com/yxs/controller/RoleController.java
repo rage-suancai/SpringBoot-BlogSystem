@@ -14,7 +14,6 @@ import java.util.List;
  * @PackageName: com.yxs.controller
  * @ClassName: RoleCotroller
  * @Desription:
- * @date 2023/4/10 9:26
  */
 @RestController
 @RequestMapping("/system/role")

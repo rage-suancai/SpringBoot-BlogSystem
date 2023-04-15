@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="0" failures="0" name="OssTest" time="0" errors="0" skipped="0">
+  <properties>
+    <property name="idea.version" value="2022.2.4"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="sun.boot.library.path" value="C:\Users\AKAtravis-yxs\.jdks\corretto-1.8.0_362\jre\bin"/>
+    <property name="java.vm.version" value="25.362-b08"/>
+    <property name="java.vm.vendor" value="Amazon.com Inc."/>
+    <property name="maven.multiModuleProjectDirectory" value="D:\back-end learning\java-exercise\JavaEE\practice\javaSpringBoot-ModuarBlog\com.yxsBlog"/>
+    <property name="java.vendor.url" value="https://aws.amazon.com/corretto/"/>
+    <property name="path.separator" value=";"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="D:\back-end learning\java-exercise\JavaEE\practice\javaSpringBoot-ModuarBlog\com.yxsBlog"/>
+    <property name="java.runtime.version" value="1.8.0_362-b08"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="java.endorsed.dirs" value="C:\Users\AKAtravis-yxs\.jdks\corretto-1.8.0_362\jre\lib\endorsed"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\AKATRA~1\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="maven.ext.class.path" value="D:\code-software\intellij IDEA\IntelliJ IDEA 2022.2.4\plugins\maven\lib\maven-event-listener.jar"/>
+    <property name="classworlds.conf" value="D:\code-software\maven-framework\apache-maven-3.8.4\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="GBK"/>
+    <property name="java.library.path" value="C:\Users\AKAtravis-yxs\.jdks\corretto-1.8.0_362\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\代码软件\OracleXE112\ox\app\oracle\product\11.2.0\server\bin;%JA;A_HOME%\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;D:\code-software\maven-framework\apache-maven-3.8.4\bin;C:\Program Files (x86)\MySQL\MySQL Server 5.1\bin;D:\mysql-server\bin;D:\code-software\jar gather\JAVA-exploitation\Git\Git\cmd;C:\Program Files\Java\jdk-14.0.2\bin;F:\MinGW\bin;F:\Xshell\xftp\;F:\Xshell\xshell\;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;D:\code-software\jar gather\JAVA-exploitation\Node.js\node-v12.18.3-win-x64\;D:\code-software\jar gather\JAVA-exploitation\Node.js\node-v12.18.3-win-x64\node_global;D:\code-software\Cmder;D:\code-software\neovim\nvim-win64\bin;;D:\code-software\WechatDevtools\微信web开发者工具\dll;D:\code-software\jar gather\PYTHON-exploitation\Scripts\;D:\code-software\jar gather\PYTHON-exploitation\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\AKAtravis-yxs\AppData\Local\Microsoft\WindowsApps;C:\Users\AKAtravis-yxs\AppData\Roaming\npm;C:\Users\AKAtravis-yxs\AppData\Local\JetBrains\Toolbox\scripts;F:\MinGW\bin;D:\code-software\VSCode\IDE\Microsoft VS Code\bin;C:\Users\AKAtravis-yxs\AppData\Local\Programs\oh-my-posh\bin;D:\code-software\jar gather\JAVA-exploitation\JDKjava\jdk17\bin;;."/>
+    <property name="maven.conf" value="D:\code-software\maven-framework\apache-maven-3.8.4/conf"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.class.version" value="52.0"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="10.0"/>
+    <property name="user.home" value="C:\Users\AKAtravis-yxs"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="user.name" value="AKAtravis-yxs"/>
+    <property name="java.class.path" value="D:\code-software\maven-framework\apache-maven-3.8.4\boot\plexus-classworlds-2.6.0.jar;D:\code-software\maven-framework\apache-maven-3.8.4\boot\plexus-classworlds.license;D:\code-software\intellij IDEA\IntelliJ IDEA 2022.2.4\lib\idea_rt.jar"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.home" value="C:\Users\AKAtravis-yxs\.jdks\corretto-1.8.0_362\jre"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2022.2.4 -s D:\code-software\maven-framework\apache-maven-3.8.4\conf\settings.xml install"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.language" value="zh"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.version" value="1.8.0_362"/>
+    <property name="java.ext.dirs" value="C:\Users\AKAtravis-yxs\.jdks\corretto-1.8.0_362\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
+    <property name="sun.boot.class.path" value="C:\Users\AKAtravis-yxs\.jdks\corretto-1.8.0_362\jre\lib\resources.jar;C:\Users\AKAtravis-yxs\.jdks\corretto-1.8.0_362\jre\lib\rt.jar;C:\Users\AKAtravis-yxs\.jdks\corretto-1.8.0_362\jre\lib\sunrsasign.jar;C:\Users\AKAtravis-yxs\.jdks\corretto-1.8.0_362\jre\lib\jsse.jar;C:\Users\AKAtravis-yxs\.jdks\corretto-1.8.0_362\jre\lib\jce.jar;C:\Users\AKAtravis-yxs\.jdks\corretto-1.8.0_362\jre\lib\charsets.jar;C:\Users\AKAtravis-yxs\.jdks\corretto-1.8.0_362\jre\lib\jfr.jar;C:\Users\AKAtravis-yxs\.jdks\corretto-1.8.0_362\jre\classes"/>
+    <property name="java.vendor" value="Amazon.com Inc."/>
+    <property name="java.specification.maintenance.version" value="4"/>
+    <property name="maven.home" value="D:\code-software\maven-framework\apache-maven-3.8.4"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.vendor.url.bug" value="https://github.com/corretto/corretto-8/issues/"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.desktop" value="windows"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+</testsuite>

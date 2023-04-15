@@ -12,7 +12,6 @@ import java.util.List;
  * @PackageName: com.yxs.vo
  * @ClassName: AdminUserInfoVo
  * @Desription:
- * @date 2023/3/23 2:20
  */
 @Data
 @NoArgsConstructor

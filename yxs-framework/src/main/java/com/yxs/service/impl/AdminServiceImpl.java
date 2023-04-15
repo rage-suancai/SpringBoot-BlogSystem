@@ -33,7 +33,6 @@ import java.util.Objects;
  * @PackageName: com.yxs.service.impl
  * @ClassName: AdminServiceImpl
  * @Desription:
- * @date 2023/3/22 19:40
  */
 @Service("adminService")
 public class AdminServiceImpl extends ServiceImpl<AdminMapper, User> implements AdminService {

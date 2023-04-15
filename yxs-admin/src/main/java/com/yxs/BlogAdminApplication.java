@@ -9,7 +9,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  * @PackageName: com.yxs
  * @ClassName: BlogAdminApplication
  * @Desription:
- * @date 2023/3/22 16:51
  */
 @EnableSwagger2
 @SpringBootApplication

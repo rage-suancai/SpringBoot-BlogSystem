@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
  * @PackageName: com.yxs.exception
  * @ClassName: GlobalExceptionHandler
  * @Desription:
- * @date 2023/3/20 14:38
  */
 @RestControllerAdvice
 @Slf4j

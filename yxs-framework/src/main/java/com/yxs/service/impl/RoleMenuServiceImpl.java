@@ -12,7 +12,6 @@ import org.springframework.stereotype.Service;
  * @PackageName: com.yxs.service.impl
  * @ClassName: RoleMenuServiceImpl
  * @Desription:
- * @date 2023/4/10 9:27
  */
 @Service("roleMenuService")
 public class RoleMenuServiceImpl extends ServiceImpl<RoleMenuMapper, RoleMenu> implements RoleMenuService {

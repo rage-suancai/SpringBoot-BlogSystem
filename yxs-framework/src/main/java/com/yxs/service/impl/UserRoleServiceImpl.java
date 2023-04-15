@@ -11,7 +11,6 @@ import org.springframework.stereotype.Service;
  * @PackageName: com.yxs.service.impl
  * @ClassName: UserRoleServiceImpl
  * @Desription:
- * @date 2023/4/10 9:58
  */
 @Service("userRoleService")
 public class UserRoleServiceImpl extends ServiceImpl<UserRoleMapper, UserRole> implements UserRoleService {

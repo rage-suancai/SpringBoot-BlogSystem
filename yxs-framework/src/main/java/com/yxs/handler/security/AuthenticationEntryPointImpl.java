@@ -20,7 +20,6 @@ import java.io.IOException;
  * @PackageName: com.yxs.handler.security
  * @ClassName: AuthenticationEntryPointImpl
  * @Desription:
- * @date 2023/3/20 11:59
  */
 @Component
 public class AuthenticationEntryPointImpl implements AuthenticationEntryPoint {

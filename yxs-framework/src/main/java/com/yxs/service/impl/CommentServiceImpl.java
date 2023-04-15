@@ -26,7 +26,6 @@ import java.util.stream.Collectors;
  * @PackageName: com.yxs.service.impl
  * @ClassName: CommentServiceImpl
  * @Desription:
- * @date 2023/3/20 15:06
  */
 @Service("commentService")
 public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment> implements CommentService {

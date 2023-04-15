@@ -14,7 +14,6 @@ import javax.annotation.Resource;
  * @PackageName: com.yxs.controller
  * @ClassName: CategoryController
  * @Desription:
- * @date 2023/3/18 15:09
  */
 @RestController
 @RequestMapping("/category")

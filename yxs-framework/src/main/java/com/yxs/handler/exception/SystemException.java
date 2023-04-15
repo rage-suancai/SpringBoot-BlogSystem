@@ -7,7 +7,6 @@ import com.yxs.enums.AppHttpCodeEnum;
  * @PackageName: com.yxs.exception
  * @ClassName: SystemException
  * @Desription:
- * @date 2023/3/20 14:35
  */
 public class SystemException extends RuntimeException {
 

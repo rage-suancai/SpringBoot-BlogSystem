@@ -13,7 +13,6 @@ import javax.annotation.Resource;
  * @PackageName: com.yxs.controller
  * @ClassName: UserController
  * @Desription:
- * @date 2023/3/21 10:53
  */
 @RestController
 @RequestMapping("/user")

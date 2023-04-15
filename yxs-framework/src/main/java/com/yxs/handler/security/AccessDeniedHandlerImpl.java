@@ -18,7 +18,6 @@ import java.io.IOException;
  * @PackageName: com.yxs.handler.security
  * @ClassName: AccessDeniedHandlerImpl
  * @Desription:
- * @date 2023/3/20 12:00
  */
 @Component
 public class AccessDeniedHandlerImpl implements AccessDeniedHandler {

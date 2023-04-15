@@ -12,11 +12,11 @@
           alt=""
         />
         <h1 v-if="this.$store.state.themeObj.user_start != 0">
-          <span>请别再呼唤我为孤独之人</span>
+          <span>Change Your Heart or Die</span>
         </h1>
       </div>
       <div class="r1-body">
-        <p>三更</p>
+        <p>酸菜</p>
         <div class="catch-me">
           <div class="">
             <el-tooltip class="item" content="Github" placement="top">
@@ -27,16 +27,6 @@
             <el-tooltip class="item" effect="dark" content="QQ" placement="top">
               <a :href="catchMeObj.qq" target="_blank"
                 ><i class="fa fa-fw fa-qq"></i
-              ></a>
-            </el-tooltip>
-            <el-tooltip
-              class="item"
-              effect="dark"
-              content="微博"
-              placement="top"
-            >
-              <a :href="catchMeObj.sina" target="_blank"
-                ><i class="fa fa-fw fa-weibo"></i
               ></a>
             </el-tooltip>
           </div>
@@ -50,14 +40,6 @@
               <a :href="catchMeObj.wechat" target="_blank"
                 ><i class="fa fa-fw fa-wechat"></i
               ></a>
-            </el-tooltip>
-            <el-tooltip
-              class="item"
-              effect="dark"
-              content="CSDN"
-              placement="top"
-            >
-              <a :href="catchMeObj.csdn" target="_blank"><i class="">C</i></a>
             </el-tooltip>
           </div>
         </div>
@@ -121,12 +103,9 @@ export default {
       artCommentList: "", //最新评论
       catchMeObj: {
         //个人信息
-        git: "https://gitee.com",
-        qq: "/static/img/qq.png",
-        sina: "https://weibo.com",
-        wechat: "/static/img/qq.jpg",
-        csdn: "http://www.csdn.cn",
-        job: "https://www.baidu.com",
+        git: "https://github.com/rage-suancai",
+        qq: "/static/img/qq.jpg",
+        wechat: "/static/img/wx.jpg",
       },
     };
   },

@@ -13,7 +13,6 @@ import javax.annotation.Resource;
  * @PackageName: com.yxs.controller
  * @ClassName: CommentController
  * @Desription:
- * @date 2023/3/20 14:59
  */
 @RestController
 @RequestMapping("/comment")

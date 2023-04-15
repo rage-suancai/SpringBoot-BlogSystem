@@ -10,7 +10,6 @@ import java.io.Serializable;
  * @PackageName: com.yxs.domain
  * @ClassName: ResponseResult
  * @Desription:
- * @date 2023/3/18 1:00
  */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class ResponseResult<T> implements Serializable {

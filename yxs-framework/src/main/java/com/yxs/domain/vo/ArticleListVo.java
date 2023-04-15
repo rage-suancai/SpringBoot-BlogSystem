@@ -11,7 +11,6 @@ import java.util.Date;
  * @PackageName: com.yxs.vo
  * @ClassName: ArticleListVo
  * @Desription:
- * @date 2023/3/18 21:42
  */
 @Data
 @NoArgsConstructor

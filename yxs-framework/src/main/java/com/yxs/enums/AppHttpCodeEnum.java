@@ -5,7 +5,6 @@ package com.yxs.enums;
  * @PackageName: com.yxs.domain.enums
  * @ClassName: AppHttpCodeEnum
  * @Desription:
- * @date 2023/3/18 1:22
  */
 public enum AppHttpCodeEnum {
 

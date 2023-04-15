@@ -17,7 +17,6 @@ import javax.annotation.Resource;
  * @PackageName: com.yxs.controller
  * @ClassName: BlogLoginController
  * @Desription:
- * @date 2023/3/19 2:45
  */
 @RestController
 public class BlogLoginController {

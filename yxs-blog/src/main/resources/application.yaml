@@ -23,3 +23,8 @@ mybatis-plus:
       logic-delete-value: 1
       logic-not-delete-value: 0
       id-type: auto
+
+oss:
+  accessKey: 32hBB9Fs6DBoCZRA7vICJGg7s4zoeTIohzQX7yUC
+  secretKey: NA4dcpln7W2dRn5WOVh-sfvXXg-AAETIMZvUtvGA
+  bucket: yxs-blog

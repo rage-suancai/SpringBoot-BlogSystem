@@ -14,7 +14,6 @@ import javax.annotation.Resource;
  * @PackageName: com.yxs.controller
  * @ClassName: LinkController
  * @Desription:
- * @date 2023/3/19 0:40
  */
 @RestController
 @RequestMapping("/link")

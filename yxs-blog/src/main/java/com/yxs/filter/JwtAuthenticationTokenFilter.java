@@ -27,7 +27,6 @@ import java.util.Objects;
  * @PackageName: com.yxs.filter
  * @ClassName: JwtAuthenticationTokenFilter
  * @Desription:
- * @date 2023/3/20 10:44
  */
 @Component
 public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {

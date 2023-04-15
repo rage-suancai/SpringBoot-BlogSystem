@@ -20,7 +20,6 @@ import java.util.Objects;
  * @PackageName: com.yxs.service.impl
  * @ClassName: UserDetailServiceImpl
  * @Desription:
- * @date 2023/3/20 9:10
  */
 @Service("userDetailService")
 public class UserDetailServiceImpl implements UserDetailsService {

@@ -9,7 +9,6 @@ import lombok.NoArgsConstructor;
  * @PackageName: com.yxs.vo
  * @ClassName: BlogUserLoginVo
  * @Desription:
- * @date 2023/3/19 3:29
  */
 @Data
 @NoArgsConstructor

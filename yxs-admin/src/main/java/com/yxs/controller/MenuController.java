@@ -18,7 +18,6 @@ import java.util.List;
  * @PackageName: com.yxs.controller
  * @ClassName: MenuController
  * @Desription:
- * @date 2023/4/8 15:47
  */
 @RestController
 @RequestMapping("/system/menu")

@@ -17,7 +17,6 @@ import java.util.stream.Collectors;
  * @PackageName: com.yxs.job
  * @ClassName: UpdateViewCountJob
  * @Desription:
- * @date 2023/3/22 15:27
  */
 @Component
 public class UpdateViewCountJob {

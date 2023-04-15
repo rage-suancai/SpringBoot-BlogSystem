@@ -18,7 +18,6 @@ import java.util.List;
  * @PackageName: com.yxs.config
  * @ClassName: WebConfig
  * @Desription:
- * @date 2023/3/18 2:15
  */
 @Configuration
 public class WebConfig implements WebMvcConfigurer {

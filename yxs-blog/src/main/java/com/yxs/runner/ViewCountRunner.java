@@ -17,7 +17,6 @@ import java.util.stream.Collectors;
  * @PackageName: com.yxs.runner
  * @ClassName: ViewCountRunner
  * @Desription:
- * @date 2023/3/22 9:35
  */
 @Component
 public class ViewCountRunner implements CommandLineRunner {

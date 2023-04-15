@@ -5,7 +5,6 @@ package com.yxs.constants;
  * @PackageName: com.yxs.constants
  * @ClassName: SystemConstants
  * @Desription:
- * @date 2023/3/18 2:49
  */
 public class SystemConstants {
 

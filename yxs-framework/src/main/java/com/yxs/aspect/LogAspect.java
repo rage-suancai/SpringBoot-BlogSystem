@@ -19,7 +19,6 @@ import javax.servlet.http.HttpServletRequest;
  * @PackageName: com.yxs.annotation
  * @ClassName: LogAspect
  * @Desription:
- * @date 2023/3/21 18:47
  */
 @Aspect
 @Component

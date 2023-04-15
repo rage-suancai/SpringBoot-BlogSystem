@@ -24,7 +24,6 @@ import java.util.List;
  * @PackageName: com.yxs.controller
  * @ClassName: CategoryController
  * @Desription:
- * @date 2023/4/7 16:43
  */
 @RestController
 @RequestMapping("/content/category")

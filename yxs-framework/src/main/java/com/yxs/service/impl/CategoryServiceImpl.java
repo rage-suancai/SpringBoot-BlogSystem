@@ -27,7 +27,6 @@ import java.util.stream.Collectors;
  * @PackageName: com.yxs.service.impl
  * @ClassName: CategoryServiceImpl
  * @Desription:
- * @date 2023/3/18 15:17
  */
 @Service("categoryService")
 public class CategoryServiceImpl extends ServiceImpl<CategoryMapper, Category> implements CategoryService {

@@ -16,7 +16,6 @@ import javax.annotation.Resource;
  * @PackageName: com.yxs.controller
  * @ClassName: ArticleController
  * @Desription:
- * @date 2023/4/1 11:03
  */
 @RestController
 @RequestMapping("/content/article")

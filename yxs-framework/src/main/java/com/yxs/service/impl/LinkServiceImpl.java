@@ -18,7 +18,6 @@ import java.util.List;
  * @PackageName: com.yxs.service.impl
  * @ClassName: LinkServiceImpl
  * @Desription:
- * @date 2023/3/19 0:50
  */
 @Service("linkService")
 public class LinkServiceImpl extends ServiceImpl<LinkMapper, Link> implements LinkService {

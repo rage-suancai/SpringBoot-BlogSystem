@@ -10,7 +10,6 @@ import java.util.List;
  * @PackageName: com.yxs.service.impl
  * @ClassName: PermissionService
  * @Desription:
- * @date 2023/4/8 15:29
  */
 @Service("ps")
 public class PermissionService {

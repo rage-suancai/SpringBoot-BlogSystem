@@ -9,7 +9,6 @@ import lombok.NoArgsConstructor;
  * @PackageName: com.yxs.vo
  * @ClassName: CategoryVO
  * @Desription:
- * @date 2023/3/18 15:35
  */
 @Data
 @NoArgsConstructor

@@ -10,7 +10,6 @@ import org.springframework.context.annotation.Configuration;
  * @PackageName: com.yxs.config
  * @ClassName: MbatisPlusConfig
  * @Desription:
- * @date 2023/3/18 20:52
  */
 @Configuration
 public class MybatisPlusConfig {
